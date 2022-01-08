@@ -32,12 +32,13 @@ body  {
 .footer {
   grid-area: f;
   background-color: #d2bbf2;
+  color: #554073;
 }
 
 .container {
   display: grid;
   box-shadow: 0 0 20px 1px #ede9f2;
-  grid-template: 5rem auto 5rem / repeat(4, 1fr);
+  grid-template: 5rem auto auto / repeat(4, 1fr);
   grid-template-areas:
           "h h h me"
           "ma ma ma ma"
@@ -55,6 +56,14 @@ body  {
   font: 400 0.9rem 'Montserrat', arial, sans-serif;
   line-height: 1.8;
 }
+
+ .p-footer {
+   margin: 2rem 5% 2rem 5%;
+   text-align: center;
+   font: 600 0.9rem 'Montserrat', arial, sans-serif;
+   line-height: 1.6;
+ }
+
 
 .h1 {
    margin: 6rem 5% 0 5%;
@@ -186,12 +195,18 @@ body  {
 .mobile-only {
   display: inherit;
 }
+
 .desktop-only {
   display: none;
 }
 
 
 @media only screen and (min-width: 992px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 
   /* billeder, videoer, knapper m.m.*/
 
@@ -254,6 +269,12 @@ body  {
     line-height: 2;
     font-size: 1rem;
     margin: 15% 3rem 0 4rem;
+  }
+
+  .p-footer {
+    line-height: 1.8;
+    margin: 3rem 4rem 3rem 4rem;
+    font-size: 1rem;
   }
 
   #h1 {
